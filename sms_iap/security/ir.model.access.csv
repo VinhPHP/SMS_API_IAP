@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_config_api_sms_iap_public,access_config_api_sms_iap_public,sms_iap.model_config_api_sms_iap,,1,1,1,1
+access_config_api_sms_iap_params_public,access_config_api_sms_iap_params_public,sms_iap.model_config_api_sms_iap_params,,1,1,1,1

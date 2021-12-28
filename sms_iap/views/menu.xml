@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_view_config_api_sms_iap"
+                  parent="phone_validation.phone_menu_main"
+                  action="action_view_config_api_sms_iap"
+                  sequence="0"/>
+    </data>
+</odoo>

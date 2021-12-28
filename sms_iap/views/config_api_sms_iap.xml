@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_config_api_sms_iap_tree" model="ir.ui.view">
+        <field name="name">Config API SMS IAP</field>
+        <field name="model">config.api.sms.iap</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_config_api_sms_iap" model="ir.ui.view">
+        <field name="name">Config API SMS IAP</field>
+        <field name="model">config.api.sms.iap</field>
+        <field name="arch" type="xml">
+            <form string="Cấu hình mẫu">
+                <sheet>
+                    <button type="object" name="action_check_api" class="btn btn-primary"
+                            string="Test API"/>
+                    <group>
+                        <field name="name" placeholder="/a/b/...." required="1"/>
+                        <field name="type" required="1"/>
+                        <field name="description" placeholder="..."/>
+                    </group>
+                    <notebook>
+                        <page string="Params">
+                            <field name="params_ids" string="Params">
+                                <tree editable="bottom" open="false">
+                                    <field name="key" required="1"/>
+                                    <field name="type" required="1"/>
+                                    <field name="value" required="1"/>
+                                    <field name="note"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_config_api_sms_iap" model="ir.actions.act_window">
+        <field name="name">Config API SMS IAP</field>
+        <field name="res_model">config.api.sms.iap</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
